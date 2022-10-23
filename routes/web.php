@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controlador;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
-    return view('welcome');
+    return view('Menu');
 });
+*/
+Route:: post('guarda', [Controlador::class, 'registroInfo'])->name('guardar');
+Route::view('/','Menu')->name("regre");
+Route::view('For', 'Formulario')->name('forms');
+Route::view('Tabla', 'Tabla')->name('tabla');
